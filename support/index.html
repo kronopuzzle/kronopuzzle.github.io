@@ -1,0 +1,100 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Support · Krono Puzzle</title>
+  <meta name="description" content="Krono Puzzle, the training clock for speed puzzlers.">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="alternate" hreflang="en" href="/support/">
+  <link rel="alternate" hreflang="es-ES" href="/es/support/">
+  <link rel="alternate" hreflang="pt-BR" href="/pt-br/support/">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="/">Krono <span>Puzzle</span></a>
+    <nav class="lang-switch" aria-label="Languages">
+      <ul>
+      <li><a href="/support/" hreflang="en" lang="en" aria-current="true">English</a></li>
+      <li><a href="/es/support/" hreflang="es-ES" lang="es-ES">Español</a></li>
+      <li><a href="/pt-br/support/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<h1>Support</h1>
+<p class="meta">Last updated: <time datetime="2026-11-11">11 November 2026</time>. Describes release v0, the current version: no account and no catalog.</p>
+<h2 id="contact">1. Contact</h2>
+<div class="card">
+  <p>Write to the support contact: <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a></p>
+  <p>We aim to answer within 30 days. There is no contact form.</p>
+</div>
+
+<h2 id="faq">2. Frequently asked questions</h2>
+<h3>Does the timer keep running when my phone locks or restarts?</h3>
+<p>Yes. The clock is derived from the moments you start, pause, and resume, which are saved at once, so locking the phone, closing the app, or restarting the iPhone does not lose time.</p>
+<h3>Why does the net time differ from the total on the clock?</h3>
+<p>The net time is the official time: it does not count pauses. The total on the clock is the whole time from start to finish, pauses included.</p>
+<h3>Can I edit a solve? What is the pencil mark?</h3>
+<p>Yes, you can edit a solve's times and pauses. An edited solve keeps a pencil mark next to its time, so your records stay honest.</p>
+<h3>The app says Live Activities are off.</h3>
+<p>Open iOS Settings, Krono Puzzle, and turn on Live Activities. The running clock then shows on the Lock Screen and in the Dynamic Island.</p>
+<h3>How do I move to a new iPhone without an account?</h3>
+<p>Your data travels in your iPhone's backup. Back up the old iPhone to iCloud or to a computer, then restore that backup on the new iPhone.</p>
+<h3>How do I export or delete my data?</h3>
+<p>In Settings, Your data: export all your data as JSON or your solves as CSV, or use Delete all my data to remove everything from this iPhone.</p>
+<h3>The barcode is not found.</h3>
+<p class="release">Applies from version 1, with the catalog. Not in the current version.</p>
+<p>Enter the puzzle manually and leave "Send to the catalog" on, so the barcode is added to the catalog.</p>
+<h3>Do I need to sign in?</h3>
+<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
+<p>No. Signing in is optional; without an account the app works fully and your data stays on your iPhone. An account adds sync, rankings, and friends.</p>
+<h3>How do rankings and self-reported times work?</h3>
+<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
+<p>Rankings are per puzzle and per mode. Every time is reported by the person who solved the puzzle; Krono Puzzle cannot verify it.</p>
+<h3>How do I report a time?</h3>
+<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
+<p>Open the time in the rankings and choose to report it, with a reason and an optional note. Reports are seen only by the moderator.</p>
+<h3>A translation reads wrong.</h3>
+<p>Write to the support contact with the screen and the text. The fix ships in a normal app update.</p>
+
+<h2 id="delete-account">3. How to delete your account</h2>
+<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
+<ol>
+  <li>Open Krono Puzzle and go to Settings, Account.</li>
+  <li>Tap Delete account.</li>
+  <li>Choose whether to keep a copy of your data on this iPhone (the default) or remove it, and confirm.</li>
+</ol>
+<p>You are removed from the rankings and from your friends at once, and all data on our servers is erased within 30 days. If the app is no longer installed, write to <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a> for help.</p>
+
+<h2 id="acknowledgements">4. Acknowledgements</h2>
+<p>Krono Puzzle uses the Archivo fonts, distributed under the SIL Open Font License, Version 1.1.</p>
+<p>Copyright 2020 The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo)</p>
+<p>The full license text is in the app, under Settings, About, Licenses.</p>
+
+<h2 id="links">5. Links</h2>
+<ul>
+  <li><a href="/privacy/">Privacy policy</a></li>
+  <li>App Store page: linked here once the app is published.</li>
+</ul>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Site navigation">
+      <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/privacy/">Privacy policy</a></li>
+      <li><a href="/support/">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
