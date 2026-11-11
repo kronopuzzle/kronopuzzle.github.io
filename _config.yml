@@ -1,0 +1,19 @@
+# Site configuration for https://kronopuzzle.github.io, built by the built-in
+# GitHub Pages (Jekyll) build. No theme, no plugins used by the pages.
+
+title: Krono Puzzle
+
+# Support and privacy contact. This is the only place in
+# the repository that holds the address; every page reads it through
+# {{ site.support_email }}. Change it here and nowhere else.
+support_email: guilhermevirtuoso83@gmail.com
+
+# Pages are plain HTML; no layout is wrapped around them.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: null
+
+exclude:
+  - README.md

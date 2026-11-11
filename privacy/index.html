@@ -1,0 +1,110 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy policy · Krono Puzzle</title>
+  <meta name="description" content="Krono Puzzle, the training clock for speed puzzlers.">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="alternate" hreflang="en" href="/privacy/">
+  <link rel="alternate" hreflang="es-ES" href="/es/privacy/">
+  <link rel="alternate" hreflang="pt-BR" href="/pt-br/privacy/">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="/">Krono <span>Puzzle</span></a>
+    <nav class="lang-switch" aria-label="Languages">
+      <ul>
+      <li><a href="/privacy/" hreflang="en" lang="en" aria-current="page">English</a></li>
+      <li><a href="/es/privacy/" hreflang="es-ES" lang="es-ES">Español</a></li>
+      <li><a href="/pt-br/privacy/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<h1>Privacy policy</h1>
+<p class="meta">Last updated: <time datetime="2026-11-11">11 November 2026</time>. Describes release v0, the current version: no account and no catalog.</p>
+<p>This policy covers every release of Krono Puzzle. Sections that apply only to a later release are marked; they describe what that release will do and do not apply to the current version.</p>
+
+<h2 id="who-we-are">1. Who we are</h2>
+<p>Krono Puzzle is an independent app for timing jigsaw puzzle solves. For any privacy question or request, write to the support contact: <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>.</p>
+
+<h2 id="short-version">2. The short version</h2>
+<p>Without an account, your puzzles and solves never leave your iPhone. The current version sends nothing over the network: no account, no server, no analytics.</p>
+
+<h2 id="on-your-device">3. Data on your device</h2>
+<p>Your puzzles, solves, pauses, settings, and box photos are stored only on your iPhone and in its iOS backup. Box photos never leave your iPhone, in any release.</p>
+<ul>
+  <li><strong>Export:</strong> in Settings, Your data, you can export all your data as JSON (box photos are not included) or your solves as CSV. The file is built on your iPhone and leaves it only through the share sheet, to the destination you pick; the temporary file is removed after sharing.</li>
+  <li><strong>Delete all my data:</strong> in Settings, Your data, removes your puzzles, solves, pauses, photos, and settings (except the app language) from your iPhone.</li>
+  <li><strong>Diagnostics:</strong> if you chose to share crash and usage data with Apple in iOS, Apple may share crash reports with us through App Store Connect under Apple's policy. The app itself sends nothing and links nothing to you.</li>
+</ul>
+<h3 id="championships">Championships</h3>
+<p class="release">Applies when championships are released. Not in the current version.</p>
+<p>In a championship, the championship name, its rules, the names the participants type, their times, and the pieces left travel over the local network, encrypted, only to the other phones in the same championship room while it is open. They never go to the internet or to us. Each phone that took part or moderated keeps its championship history until it is deleted from the history or by Delete all my data. Championships use the iOS Local Network permission; you can turn it off at any time in iOS Settings, Krono Puzzle, Local Network.</p>
+
+<h2 id="catalog">4. Catalog features</h2>
+<p class="release">Applies from version 1, with the catalog. Not in the current version.</p>
+<p>The catalog helps you find a puzzle by its barcode or by searching. When you scan a barcode or search, the app sends the barcode or the search text to our catalog service to answer the request; it is not logged. Every catalog request also carries the app version, the language, and an anonymous installation id: a random number created by the app, not linked to you, used only to apply rate limits. When you leave "Send to the catalog" on, the app sends the puzzle's code, title, brand, and piece count, which stay in the catalog as facts about the puzzle. No images are ever uploaded.</p>
+<ul>
+  <li>Rate-limit counters are kept for the current window plus 48 hours, then deleted.</li>
+  <li>The installation id stored with a submission is kept until 90 days after the submission is decided, then replaced by an anonymous value.</li>
+  <li>Delete all my data also deletes the installation id and your queue of submissions, so the next catalog request uses a new, unrelated id.</li>
+</ul>
+
+<h2 id="accounts">5. Accounts</h2>
+<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
+<p>An account is optional. You sign in with Apple or with Google. We receive the provider's identifier for you and your name if you choose to share it. We do not ask for your email address. Your profile has a display name and a country. If you turn on public rankings, other users see your display name, country, and best times in the rankings; friends you add by invite code see them too. You can turn public rankings off at any time. Times are self-reported. Other users can report a time with a reason and an optional note; reports are seen only by the moderator.</p>
+<p>When you are signed in, your puzzles and solves (with their pauses), your profile, friendships, invite code, and the reports you file are stored by our sync and rankings services and kept until you delete your account, plus at most 30 days.</p>
+
+<h2 id="account-deletion">6. Account deletion</h2>
+<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
+<p>You can delete your account in the app, under Settings, Account, Delete account. No email or web form is needed.</p>
+<ul>
+  <li>You are removed from the rankings and from your friends' lists at once.</li>
+  <li>All data on our servers, including backups, is erased within 30 days.</li>
+  <li>Your sign-in with Apple or Google is revoked.</li>
+  <li>The data on your iPhone stays by default ("Keep a copy on this iPhone"); you can choose "Remove my data from this iPhone" to delete it too.</li>
+</ul>
+<p>Delete all my data on the iPhone does not delete your account; to delete the data on our servers, use Delete account.</p>
+
+<h2 id="never">7. What we never do</h2>
+<p>No ads, no tracking, no sale of data, no analytics SDKs, no import of contacts or social graph, and no location. The app never asks for your email address.</p>
+
+<h2 id="providers">8. Service providers</h2>
+<p>The current version uses no service provider: the app sends no data to any server.</p>
+<ul>
+  <li>From version 1, our backend is hosted by Cloudflare.</li>
+  <li>From version 2, Apple and Google provide sign-in.</li>
+</ul>
+<p>The site is hosted on GitHub Pages. GitHub logs and stores visitors' IP addresses for security purposes under its own privacy statement; the project does not receive those logs. We use no cookies or analytics.</p>
+
+<h2 id="children">9. Children</h2>
+<p>The app is not directed at children. The current version collects no data from anyone.</p>
+
+<h2 id="rights">10. Your rights and requests</h2>
+<p>You can ask for access to, correction of, deletion of, or an export of your data. In the current version all your data is on your iPhone, so you can export or delete it yourself in Settings, Your data. For any request, write to <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>. We aim to answer within 30 days.</p>
+
+<h2 id="changes">11. Changes to this policy</h2>
+<p>When a release changes what the app does with data, this policy is updated in the same release and the date at the top changes. Earlier versions stay in the history of this site's public repository.</p>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Site navigation">
+      <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/privacy/">Privacy policy</a></li>
+      <li><a href="/support/">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
