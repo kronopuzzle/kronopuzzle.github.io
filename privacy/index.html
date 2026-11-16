@@ -30,11 +30,11 @@ layout: null
 </header>
 <main class="wrap">
 <h1>Privacy policy</h1>
-<p class="meta">Last updated: <time datetime="2026-11-11">11 November 2026</time>. Describes release v0, the current version: no account and no catalog.</p>
+<p class="meta">Last updated: <time datetime="2026-11-16">16 November 2026</time>. Describes release v0, the current version: no account and no catalog.</p>
 <p>This policy covers every release of Krono Puzzle. Sections that apply only to a later release are marked; they describe what that release will do and do not apply to the current version.</p>
 
 <h2 id="who-we-are">1. Who we are</h2>
-<p>Krono Puzzle is an independent app for timing jigsaw puzzle solves. For any privacy question or request, write to the support contact: <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>.</p>
+<p>Krono Puzzle is an independent app for timing jigsaw puzzle solves. The controller of the personal data described here is the individual developer of the app, who acts as a natural person and not through a company: [TODO owner: full legal name as the controller, to be confirmed by the owner before publishing]. For any privacy question or request, write to the support contact: <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>.</p>
 
 <h2 id="short-version">2. The short version</h2>
 <p>Without an account, your puzzles and solves never leave your iPhone. The current version sends nothing over the network: no account, no server, no analytics.</p>
@@ -89,10 +89,25 @@ layout: null
 <h2 id="children">9. Children</h2>
 <p>The app is not directed at children. The current version collects no data from anyone.</p>
 
-<h2 id="rights">10. Your rights and requests</h2>
-<p>You can ask for access to, correction of, deletion of, or an export of your data. In the current version all your data is on your iPhone, so you can export or delete it yourself in Settings, Your data. For any request, write to <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>. We aim to answer within 30 days.</p>
+<h2 id="legal-basis">10. Legal basis</h2>
+<p>Where we process personal data, we rely on these legal bases: under the EU General Data Protection Regulation (GDPR), Article 6, and under the Brazilian General Data Protection Law (LGPD), Article 7. Data that stays only on your iPhone is not processed by us and needs no legal basis.</p>
+<ul>
+  <li><strong>Catalog lookups and the anonymous installation id (from version 1):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in answering the request and in applying rate limits that protect the service from abuse.</li>
+  <li><strong>Hashed network address (from version 1):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in protecting the service from abuse. The address is never stored, only a keyed hash.</li>
+  <li><strong>Catalog submissions (from version 1):</strong> your consent (GDPR Art. 6(1)(a); LGPD Art. 7, I), given by leaving "Send to the catalog" on. You can turn it off at any time.</li>
+  <li><strong>Account, profile, puzzles and solves, friendships and invite code (from version 2):</strong> performing the service you ask for when you create an account (GDPR Art. 6(1)(b); LGPD Art. 7, V).</li>
+  <li><strong>Showing your display name, country, and best times in public rankings (from version 2):</strong> your consent (GDPR Art. 6(1)(a); LGPD Art. 7, I), given by turning public rankings on. You can turn it off at any time.</li>
+  <li><strong>Reports about times and moderation (from version 2):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in keeping the rankings fair.</li>
+  <li><strong>Rate-limit counters and the account deletion job (from version 2):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in protecting the service and in completing your deletion request.</li>
+</ul>
+<!-- TODO owner: the legal bases above are a proposal for the owner to confirm; the spec lists the processing but does not fix the basis of each. -->
 
-<h2 id="changes">11. Changes to this policy</h2>
+<h2 id="rights">11. Your rights and requests</h2>
+<p>Under the GDPR you have the right of access, rectification, erasure, restriction, portability, and objection, and the right to withdraw consent at any time. Under the LGPD you have the right to confirmation that we process your data, access, correction, anonymization, blocking or deletion, portability, information about sharing, and revocation of consent. You can ask for access to, correction of, deletion of, or an export of your data. In the current version all your data is on your iPhone, so you can export or delete it yourself in Settings, Your data. To exercise any right, write to <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>. We aim to answer within 30 days.</p>
+<p>You also have the right to complain to a data protection authority. In Spain it is the Agencia Española de Protección de Datos (AEPD), <a href="https://www.aepd.es" rel="noopener noreferrer">www.aepd.es</a>. In Brazil it is the Autoridade Nacional de Proteção de Dados (ANPD), <a href="https://www.gov.br/anpd" rel="noopener noreferrer">www.gov.br/anpd</a>. You may also contact the authority of the place where you live.</p>
+<!-- TODO owner: the spec does not say whether data is transferred outside the EU, the EEA, or Brazil by the hosting provider, or on what safeguard. Add the statement the law requires once decided. -->
+
+<h2 id="changes">12. Changes to this policy</h2>
 <p>When a release changes what the app does with data, this policy is updated in the same release and the date at the top changes. Earlier versions stay in the history of this site's public repository.</p>
 </main>
 <footer class="site-footer">
