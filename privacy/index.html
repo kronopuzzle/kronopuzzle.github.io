@@ -62,7 +62,7 @@ layout: null
 
 <h2 id="accounts">5. Accounts</h2>
 <p class="release">Applies from version 2, with accounts. Not in the current version.</p>
-<p>An account is optional. You sign in with Apple or with Google. We receive the provider's identifier for you and your name if you choose to share it. We do not ask for your email address. Your profile has a display name and a country. The switch "Show my times in public rankings" is on by default: other users then see your display name, country, and best times in the rankings. You can object or opt out at any time by turning it off; this takes effect for future entries. Friends you add by invite code see your display name, country, and times whatever this setting is. Times are self-reported. Other users can report a time with a reason and an optional note; reports are seen only by the moderator.</p>
+<p>An account is optional. You sign in with Apple or with Google. We receive the provider's identifier for you and your name if you choose to share it. We do not ask for your email address. Your profile has a display name and a country. The switch "Show my times in public rankings" is on by default: other users then see your display name, country, and best times in the rankings. You can object or opt out at any time by turning it off; turning it off removes your times from the public rankings at once; friends still see them. Friends you add by invite code see your display name, country, and times whatever this setting is. Times are self-reported. Other users can report a time with a reason and an optional note; reports are seen only by the moderator.</p>
 <p>When you are signed in, your puzzles and solves (with their pauses), your profile, friendships, invite code, and the reports you file are stored by our sync and rankings services and kept until you delete your account, plus at most 30 days.</p>
 <p>From version 2, our sync service also derives a keyed hash of your network address (never the address itself) to limit sign-in attempts and failed authentication. It is kept for the rate-limit window plus 48 hours.</p>
 
@@ -78,7 +78,7 @@ layout: null
 <p>Delete all my data on the iPhone does not delete your account; to delete the data on our servers, use Delete account.</p>
 
 <h2 id="never">7. What we never do</h2>
-<p>No ads, no tracking, no sale of data, no analytics SDKs, no import of contacts or social graph, and no location. The app never asks for your email address.</p>
+<p>No ads, no tracking, no sale of data, no analytics SDKs, no import of contacts or social graph, and no location. We make no automated decisions that have legal or similarly significant effects on you. The app never asks for your email address.</p>
 
 <h2 id="providers">8. Service providers</h2>
 <p>The current version uses no service provider: the app sends no data to any server.</p>
@@ -100,14 +100,14 @@ layout: null
   <li><strong>Crash reports received through App Store Connect (only if you chose to share them with Apple):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in fixing defects.</li>
   <li><strong>Account, profile, puzzles and solves, friendships, and invite code (from version 2):</strong> performance of a contract (GDPR Art. 6(1)(b); LGPD Art. 7, V), to provide the account you ask for.</li>
   <li><strong>Session records (from version 2):</strong> performance of a contract (GDPR Art. 6(1)(b); LGPD Art. 7, V), to keep you signed in.</li>
-  <li><strong>Showing your display name, country, and best times in public rankings (from version 2):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in running the rankings. You have the right to object or opt out at any time with the switch "Show my times in public rankings", which is on by default; this takes effect for future entries.</li>
+  <li><strong>Showing your display name, country, and best times in public rankings (from version 2):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in running the rankings. You have the right to object or opt out at any time with the switch "Show my times in public rankings", which is on by default; turning it off removes your times from the public rankings at once, and friends still see them.</li>
   <li><strong>Reports about times and moderation (from version 2):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in keeping the rankings fair.</li>
   <li><strong>Rate-limit counters and the account deletion job (from version 2):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in protecting the service and in completing your deletion request.</li>
 </ul>
 
 <h2 id="transfers">11. International transfers</h2>
 <p class="release">Applies from version 1, with the online service. Not in the current version.</p>
-<p>Our backend runs on Cloudflare's global network, so your data may be processed outside the European Union, the European Economic Area, and Brazil. These transfers rely on Cloudflare's Data Processing Addendum, which includes the EU Standard Contractual Clauses (GDPR Art. 46), and on contractual safeguards under LGPD Art. 33, as set out in Cloudflare's Data Processing Addendum. We make no automated decisions that have legal or similarly significant effects on you.</p>
+<p>Our backend runs on Cloudflare's global network, so your data may be processed outside the European Union, the European Economic Area, and Brazil. These transfers rely on Cloudflare's Data Processing Addendum, which includes the EU Standard Contractual Clauses (GDPR Art. 46) and sets out contractual safeguards under LGPD Art. 33.</p>
 
 <h2 id="rights">12. Your rights and requests</h2>
 <p>Under the GDPR you have the right of access, rectification, erasure, restriction, portability, and objection. Under the LGPD you have the right to confirmation that we process your data, access, correction, anonymization, blocking or deletion, portability, information about sharing, information about the possibility of refusing consent and its consequences, objection to processing, and revocation of consent where processing is based on it. In the current version all your data is on your iPhone, so you can export or delete it yourself in Settings, Your data. To exercise any right, write to <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>. We aim to answer within 30 days.</p>
