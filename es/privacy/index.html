@@ -30,20 +30,20 @@ layout: null
 </header>
 <main class="wrap">
 <h1>Política de privacidad</h1>
-<p class="meta">Última actualización: <time datetime="2026-11-16">16 de noviembre de 2026</time>. Describe la versión v0, la versión actual: sin cuenta y sin catálogo.</p>
-<p>Esta política cubre todas las versiones de Krono Puzzle. Las secciones que solo se aplican a una versión posterior están marcadas; describen lo que hará esa versión y no se aplican a la versión actual.</p>
+<p class="meta">Última actualización: <time datetime="2026-11-20">20 de noviembre de 2026</time>. Describe la versión v2 (versión 2.0.0 de la app): cuenta opcional, catálogo, clasificaciones y fotos de portada.</p>
 
 <h2 id="who-we-are">1. Quiénes somos</h2>
 <p>Krono Puzzle es una app independiente para cronometrar tus montajes de puzles. El responsable del tratamiento de los datos personales descritos aquí es la persona desarrolladora individual de la app, que actúa como persona física y no a través de una empresa: Guilherme Henrique Fernandes Virtuoso. Para cualquier pregunta o solicitud sobre privacidad, escribe al contacto de soporte: <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>.</p>
 
 <h2 id="short-version">2. En pocas palabras</h2>
-<p>Sin cuenta, tus puzles y tus montajes nunca salen de tu iPhone. La versión actual no envía nada por la red: sin cuenta, sin servidor y sin analítica.</p>
+<p>Sin cuenta, tus puzles y tus montajes se quedan en tu iPhone. El catálogo envía las solicitudes descritas en la sección 4. Una cuenta opcional sincroniza tus datos y, cuando las clasificaciones públicas están activadas, muestra tu nombre visible, tu país y tus mejores tiempos en las clasificaciones Global y de País; con las clasificaciones públicas desactivadas, tus mejores tiempos siguen apareciendo en la clasificación de Amigos para tus amigos. Sin anuncios, sin rastreo y sin analítica.</p>
 
 <h2 id="on-your-device">3. Datos en tu dispositivo</h2>
-<p>Tus puzles, montajes, pausas, ajustes y fotos de cajas se guardan solo en tu iPhone y en su copia de seguridad de iOS. Las fotos de cajas nunca salen de tu iPhone, en ninguna versión.</p>
+<p>Tus puzles, montajes, pausas, ajustes y fotos de cajas se guardan en tu iPhone y en su copia de seguridad de iOS. Tus fotos de cajas se quedan en tu iPhone: nunca se suben ni se sincronizan. La única imagen que la app puede enviar es una foto de portada (sección 4).</p>
 <ul>
   <li><strong>Exportar:</strong> en Ajustes, Tus datos, puedes exportar todos tus datos en JSON (no se incluyen las fotos de cajas) o tus montajes en CSV. El archivo se crea en tu iPhone y solo sale de él mediante el menú Compartir, hacia el destino que elijas; el archivo temporal se elimina después de compartirlo.</li>
-  <li><strong>Eliminar todos mis datos:</strong> en Ajustes, Tus datos, elimina de tu iPhone tus puzles, montajes, pausas, fotos y ajustes (excepto el idioma de la app).</li>
+  <li><strong>Eliminar todos mis datos:</strong> en Ajustes, Tus datos, elimina de tu iPhone tus puzles, montajes, pausas, fotos y ajustes (excepto el idioma de la app). Con la sesión iniciada ofrece dos opciones: «Eliminar solo de este iPhone», que no elimina tu cuenta ni tus datos en nuestros servidores, y «Eliminar todo, incluida la nube», que también elimina tu cuenta (sección 6).</li>
+  <li><strong>Imágenes para compartir:</strong> cuando compartes un resultado, la app crea la imagen en tu iPhone. Solo sale de él mediante el menú Compartir, hacia el destino que elijas; la app no la guarda y nosotros nunca la recibimos.</li>
   <li><strong>Diagnósticos:</strong> si en iOS elegiste compartir datos de fallos y de uso con Apple, Apple puede compartir con nosotros informes de fallos a través de App Store Connect, según la política de Apple. La app no envía nada por sí misma ni vincula nada a ti.</li>
 </ul>
 <h3 id="championships">Campeonatos</h3>
@@ -51,66 +51,69 @@ layout: null
 <p>En un campeonato, su nombre, sus reglas, los nombres que escriben los participantes, sus tiempos y las piezas que faltan viajan por la red local, cifrados, solo a los demás móviles de la misma sala del campeonato mientras está abierta. Nunca van a internet ni a nosotros. Cada móvil que participó o moderó guarda su historial de campeonatos hasta que se borra del historial o con Eliminar todos mis datos. Los campeonatos usan el permiso de Red local de iOS; puedes desactivarlo cuando quieras en Ajustes de iOS, Krono Puzzle, Red local.</p>
 
 <h2 id="catalog">4. Funciones del catálogo</h2>
-<p class="release">Se aplica a partir de la versión 1, con el catálogo. No está en la versión actual.</p>
-<p>El catálogo te ayuda a encontrar un puzle por su código de barras o con una búsqueda. Cuando escaneas un código de barras o buscas, la app envía el código o el texto de búsqueda a nuestro servicio de catálogo para responder; no se registra. Cada solicitud al catálogo lleva también la versión de la app y el idioma, y el servicio deriva de ella un hash con clave de tu dirección de red (nunca la dirección en sí). La solicitud lleva además un identificador anónimo de instalación: un número aleatorio creado por la app, no vinculado a ti, que solo sirve para aplicar límites de uso. Si dejas activado «Enviar al catálogo», la app envía el código, el título, la marca y el número de piezas del puzle, que quedan en el catálogo como datos sobre el puzle. Nunca se sube ninguna imagen.</p>
+<p>El catálogo te ayuda a encontrar un puzle por su código de barras o con una búsqueda. Cuando escaneas un código de barras o buscas, la app envía el código o el texto de búsqueda a nuestro servicio de catálogo para responder; no se registra. Cada solicitud al catálogo lleva también la versión de la app y el idioma, y el servicio deriva de ella un hash con clave de tu dirección de red (nunca la dirección en sí). La solicitud lleva además un identificador anónimo de instalación: un número aleatorio creado por la app, no vinculado a ti, que solo sirve para aplicar límites de uso. Si dejas activado «Enviar al catálogo», la app envía el código, el título, la marca y el número de piezas del puzle, que quedan en el catálogo como datos sobre el puzle. La única imagen que la app puede enviar es una foto de portada, y solo cuando tocas «Añadir foto de portada» en un puzle que envías al catálogo. Tus fotos de cajas y cualquier otra foto se quedan en tu iPhone.</p>
+<p><strong>Fotos de portada.</strong> Eliges una foto de portada de tu cámara o de tu fototeca y la recortas en la app. Antes de enviarla, la app la recodifica como JPEG de como máximo 1600 píxeles por lado y elimina los datos de ubicación y de la cámara; después, nuestro servicio elimina cualquier otro segmento de metadatos restante, incluido cualquier perfil de color, antes de guardarla. La foto se guarda en nuestro servicio de catálogo, en Cloudflare R2, junto con el envío al catálogo que la trajo. No está vinculada a una cuenta, a un nombre ni a un correo electrónico.</p>
 <ul>
   <li>El hash de la dirección de red se guarda durante la ventana de límite de uso más 48 horas y después se elimina.</li>
   <li>Los contadores de límite de uso se guardan durante la ventana actual más 48 horas y después se eliminan.</li>
   <li>El identificador de instalación guardado con un envío se conserva hasta 90 días después de decidir sobre el envío y después se sustituye por un valor anónimo.</li>
+  <li>El identificador anónimo de instalación de una instalación que el moderador bloqueó por abuso se conserva mientras dure el bloqueo y como máximo 12 meses después del bloqueo, salvo que se renueve; no está vinculado a tu nombre ni a tu cuenta.</li>
+  <li>Una foto de portada queda pendiente, visible solo para el moderador, hasta que el moderador decide sobre el envío. Se elimina si el moderador no la acepta o rechaza el envío. Si no se toma ninguna decisión, se elimina aproximadamente 180 días después de enviarla.</li>
+  <li>Si el moderador la acepta, la foto pasa a ser la imagen pública de ese puzle en el catálogo, visible para todos los usuarios de la app, y se queda como cualquier otra imagen del catálogo. La imagen no lleva ningún identificador y no te nombra.</li>
+  <li>Las fotos de portada no están vinculadas a tu cuenta. Eliminar la cuenta no elimina una foto que ya enviaste, y Eliminar todos mis datos solo borra la copia que aún espera en tu iPhone y restablece el identificador de instalación; no retira una foto ya enviada.</li>
   <li>Eliminar todos mis datos también elimina el identificador de instalación y tu cola de envíos, así que la siguiente solicitud al catálogo usa un identificador nuevo y sin relación con el anterior.</li>
 </ul>
 
 <h2 id="accounts">5. Cuentas</h2>
-<p class="release">Se aplica a partir de la versión 2, con las cuentas. No está en la versión actual.</p>
-<p>La cuenta es opcional. Inicias sesión con Apple o con Google. Recibimos el identificador que el proveedor tiene para ti y tu nombre si decides compartirlo. No pedimos tu correo electrónico. Tu perfil tiene un nombre visible y un país. La opción «Mostrar mis tiempos en las clasificaciones públicas» viene activada por defecto: otros usuarios ven entonces tu nombre visible, tu país y tus mejores tiempos en las clasificaciones. Puedes oponerte o darte de baja cuando quieras desactivándola; al desactivarla, tus tiempos desaparecen de las clasificaciones públicas de inmediato; los amigos siguen viéndolos. Los amigos que añadas con un código de invitación ven tu nombre visible, tu país y tus tiempos sea cual sea este ajuste. Los tiempos los declara cada usuario. Otros usuarios pueden denunciar un tiempo con un motivo y una nota opcional; las denuncias solo las ve el moderador.</p>
+<p>La cuenta es opcional. Inicias sesión con Apple o con Google. Recibimos el identificador que el proveedor tiene para ti y tu nombre si decides compartirlo; el nombre solo se usa para sugerirte un nombre visible y se guarda únicamente hasta que terminas tu perfil. No pedimos tu correo electrónico. Tu perfil tiene un nombre visible y un país. La opción «Mostrar mis tiempos en las clasificaciones públicas» (Ajustes, Cuenta, Perfil) viene activada por defecto: otros usuarios ven entonces tu nombre visible, tu país y tus mejores tiempos en las clasificaciones Global y de País. Puedes oponerte o darte de baja cuando quieras desactivándola; al desactivarla, tus tiempos desaparecen de las clasificaciones Global y de País de inmediato; tus amigos siguen viéndolos en la clasificación de Amigos. Los amigos que añadas con un código de invitación ven tu nombre visible, tu país y tus tiempos sea cual sea este ajuste. Los tiempos los declara cada usuario. Otros usuarios pueden denunciar un tiempo con un motivo y una nota opcional; las denuncias solo las ve el moderador.</p>
 <p>Con la sesión iniciada, tus puzles y montajes (con sus pausas), tu perfil, tus amistades, tu código de invitación y las denuncias que hagas se guardan en nuestros servicios de sincronización y clasificaciones hasta que borres tu cuenta, más 30 días como máximo.</p>
-<p>Desde la versión 2, nuestro servicio de sincronización también deriva un hash con clave de tu dirección de red (nunca la dirección en sí) para limitar los intentos de inicio de sesión y las autenticaciones fallidas. Se guarda durante la ventana de límite de uso más 48 horas.</p>
+<p>Nuestro servicio de sincronización también deriva un hash con clave de tu dirección de red (nunca la dirección en sí) para limitar los intentos de inicio de sesión y las autenticaciones fallidas. Se guarda durante la ventana de límite de uso más 48 horas.</p>
 
 <h2 id="account-deletion">6. Eliminación de la cuenta</h2>
-<p class="release">Se aplica a partir de la versión 2, con las cuentas. No está en la versión actual.</p>
 <p>Puedes eliminar tu cuenta en la app, en Ajustes, Cuenta, Eliminar cuenta. No hace falta correo electrónico ni formulario web.</p>
 <ul>
   <li>Sales de las clasificaciones y de las listas de tus amigos al instante.</li>
   <li>Todos los datos de nuestros servidores, incluidas las copias de seguridad, se borran en un plazo de 30 días.</li>
   <li>Se revoca tu inicio de sesión con Apple o Google.</li>
   <li>Los datos de tu iPhone se conservan por defecto («Conservar una copia en este iPhone»); puedes elegir «Eliminar mis datos de este iPhone» para borrarlos también.</li>
+  <li>Una foto de portada que ya enviaste no está vinculada a tu cuenta, así que no se elimina (sección 4).</li>
 </ul>
-<p>Eliminar todos mis datos en el iPhone no elimina tu cuenta; para borrar los datos de nuestros servidores, usa Eliminar cuenta.</p>
+<p><strong>Eliminar todo, incluida la nube.</strong> Con la sesión iniciada, Ajustes, Tus datos, Eliminar todos mis datos ofrece dos opciones. «Eliminar solo de este iPhone» borra tus datos de este iPhone y cierra la sesión en él; tu cuenta y tus datos en nuestros servidores se conservan. «Eliminar todo, incluida la nube» te pide iniciar sesión de nuevo, elimina tu cuenta en nuestros servidores como se describe arriba y, solo cuando eso se logra, borra también tus datos de este iPhone. Si la eliminación en nuestros servidores falla o el iPhone no tiene conexión, no se borra nada del iPhone y sigues con la sesión iniciada. Los demás iPhone con la sesión iniciada en la misma cuenta conservan sus copias locales hasta que las borres allí.</p>
 
 <h2 id="never">7. Lo que nunca hacemos</h2>
 <p>Sin anuncios, sin rastreo, sin venta de datos, sin SDK de analítica, sin importar contactos ni redes sociales y sin ubicación. No tomamos decisiones automatizadas que produzcan efectos jurídicos o significativos similares sobre ti. La app nunca pide tu correo electrónico.</p>
 
 <h2 id="providers">8. Proveedores de servicios</h2>
-<p>La versión actual no usa ningún proveedor de servicios: la app no envía datos a ningún servidor.</p>
+<p>Usamos estos proveedores de servicios:</p>
 <ul>
-  <li>A partir de la versión 1, nuestro backend está alojado en Cloudflare.</li>
-  <li>A partir de la versión 2, Apple y Google ofrecen el inicio de sesión.</li>
+  <li>Cloudflare aloja nuestro backend: los servicios de catálogo, sincronización y clasificaciones, y el almacenamiento R2 de las fotos de portada.</li>
+  <li>Apple y Google ofrecen el inicio de sesión.</li>
 </ul>
 <p>El sitio está alojado en GitHub Pages. GitHub registra y guarda las direcciones IP de los visitantes por motivos de seguridad, según su propia declaración de privacidad; el proyecto no recibe esos registros. No usamos cookies ni analítica.</p>
 
 <h2 id="children">9. Menores</h2>
-<p>La app no está dirigida a menores. La versión actual no recoge datos de nadie.</p>
+<p>La app no está dirigida a menores. No pide la edad y no recoge conscientemente datos de menores.</p>
 
 <h2 id="legal-basis">10. Base jurídica</h2>
 <p>Cuando tratamos datos personales, nos basamos en estas bases jurídicas: según el Reglamento General de Protección de Datos de la UE (RGPD), artículo 6, y según la Ley General de Protección de Datos de Brasil (LGPD), artículo 7. Los datos que solo están en tu iPhone no los tratamos nosotros y no necesitan base jurídica.</p>
 <ul>
-  <li><strong>Consultas al catálogo, versión de la app, idioma e identificador de instalación anónimo (desde la versión 1):</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en responder a la solicitud y en aplicar límites de uso que protegen el servicio frente a abusos.</li>
-  <li><strong>Dirección de red con hash (desde la versión 1, también en el servicio de sincronización desde la versión 2):</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en proteger el servicio frente a abusos. La dirección nunca se guarda, solo un hash con clave.</li>
-  <li><strong>Envíos al catálogo (desde la versión 1):</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en construir un catálogo compartido de datos sobre puzles. Los datos enviados (código, título, marca, número de piezas) no son datos personales; el identificador de instalación guardado con un envío se conserva 90 días después de la decisión. Puedes desactivar «Enviar al catálogo» en cualquier momento.</li>
+  <li><strong>Consultas al catálogo, versión de la app, idioma e identificador de instalación anónimo:</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en responder a la solicitud y en aplicar límites de uso que protegen el servicio frente a abusos.</li>
+  <li><strong>Dirección de red con hash (también en el servicio de sincronización):</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en proteger el servicio frente a abusos. La dirección nunca se guarda, solo un hash con clave.</li>
+  <li><strong>Envíos al catálogo:</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en construir un catálogo compartido de datos sobre puzles. Los datos enviados (código, título, marca, número de piezas) no son datos personales; el identificador de instalación guardado con un envío se conserva 90 días después de la decisión. Puedes desactivar «Enviar al catálogo» en cualquier momento.</li>
+  <li><strong>Fotos de portada:</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en construir un catálogo compartido con imágenes de puzles. Enviar una foto es decisión tuya: si no añades ninguna, no se envía nada. Puedes oponerte en cualquier momento escribiendo al contacto de soporte.</li>
   <li><strong>Informes de fallos recibidos a través de App Store Connect (solo si decidiste compartirlos con Apple):</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en corregir defectos.</li>
-  <li><strong>Cuenta, perfil, puzles y montajes, amistades y código de invitación (desde la versión 2):</strong> ejecución de un contrato (RGPD art. 6.1.b; LGPD art. 7, V), para prestar la cuenta que pides.</li>
-  <li><strong>Registros de sesión (desde la versión 2):</strong> ejecución de un contrato (RGPD art. 6.1.b; LGPD art. 7, V), para mantener tu sesión iniciada.</li>
-  <li><strong>Mostrar tu nombre visible, país y mejores tiempos en las clasificaciones públicas (desde la versión 2):</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en gestionar las clasificaciones. Tienes derecho a oponerte o darte de baja en cualquier momento con la opción «Mostrar mis tiempos en las clasificaciones públicas», activada por defecto; al desactivarla, tus tiempos desaparecen de las clasificaciones públicas de inmediato y los amigos siguen viéndolos.</li>
-  <li><strong>Denuncias de tiempos y moderación (desde la versión 2):</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en mantener justas las clasificaciones.</li>
-  <li><strong>Contadores de límite de uso y tarea de eliminación de la cuenta (desde la versión 2):</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en proteger el servicio y en completar tu solicitud de eliminación.</li>
+  <li><strong>Cuenta, perfil, puzles y montajes, amistades y código de invitación:</strong> ejecución de un contrato (RGPD art. 6.1.b; LGPD art. 7, V), para prestar la cuenta que pides.</li>
+  <li><strong>Registros de sesión:</strong> ejecución de un contrato (RGPD art. 6.1.b; LGPD art. 7, V), para mantener tu sesión iniciada.</li>
+  <li><strong>Mostrar tu nombre visible, país y mejores tiempos en las clasificaciones públicas:</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en gestionar las clasificaciones. Tienes derecho a oponerte o darte de baja en cualquier momento con la opción «Mostrar mis tiempos en las clasificaciones públicas», activada por defecto; al desactivarla, tus tiempos desaparecen de las clasificaciones públicas de inmediato y los amigos siguen viéndolos.</li>
+  <li><strong>Denuncias de tiempos y moderación:</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en mantener justas las clasificaciones.</li>
+  <li><strong>Contadores de límite de uso y tarea de eliminación de la cuenta:</strong> nuestro interés legítimo (RGPD art. 6.1.f; LGPD art. 7, IX) en proteger el servicio y en completar tu solicitud de eliminación.</li>
 </ul>
 
 <h2 id="transfers">11. Transferencias internacionales</h2>
-<p class="release">Se aplica a partir de la versión 1, con el servicio en línea. No está en la versión actual.</p>
 <p>Nuestro backend se ejecuta en la red global de Cloudflare, por lo que tus datos pueden tratarse fuera de la Unión Europea, del Espacio Económico Europeo y de Brasil. El Anexo de Tratamiento de Datos de Cloudflare incorpora las Cláusulas Contractuales Tipo de la UE para las transferencias desde el EEE, Suiza y el Reino Unido (RGPD art. 46). Para los datos procedentes de otros países, incluido Brasil, obliga a Cloudflare a cumplir la legislación de protección de datos aplicable, incluida la del país de origen de los datos.</p>
 
 <h2 id="rights">12. Tus derechos y solicitudes</h2>
-<p>Según el RGPD tienes derecho de acceso, rectificación, supresión, limitación, portabilidad y oposición. Según la LGPD tienes derecho a la confirmación de que tratamos tus datos, acceso, corrección, anonimización, bloqueo o eliminación, portabilidad, información sobre la comunicación de datos, información sobre la posibilidad de no dar el consentimiento y sus consecuencias, oposición al tratamiento y revocación del consentimiento cuando el tratamiento se basa en él. En la versión actual todos tus datos están en tu iPhone, así que puedes exportarlos o eliminarlos tú mismo en Ajustes, Tus datos. Para ejercer cualquier derecho, escribe a <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>. Procuramos responder en un plazo de 30 días.</p>
+<p>Según el RGPD tienes derecho de acceso, rectificación, supresión, limitación, portabilidad y oposición. Según la LGPD tienes derecho a la confirmación de que tratamos tus datos, acceso, corrección, anonimización, bloqueo o eliminación, portabilidad, información sobre la comunicación de datos, información sobre la posibilidad de no dar el consentimiento y sus consecuencias, oposición al tratamiento y revocación del consentimiento cuando el tratamiento se basa en él. En la app puedes exportar tus datos, eliminarlos todos o eliminar tu cuenta tú mismo (secciones 3 y 6). Para ejercer cualquier derecho, o para lo que la app no pueda hacer, escribe a <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>. Procuramos responder en un plazo de 30 días. Una foto de portada no lleva ningún identificador, así que normalmente no podemos saber cuál es tuya (RGPD art. 11). Si escribes al contacto de soporte e indicas de qué puzle se trata, eliminamos la foto del catálogo cuando podamos identificarla.</p>
 <p>También tienes derecho a presentar una reclamación ante una autoridad de protección de datos. En España es la Agencia Española de Protección de Datos (AEPD), <a href="https://www.aepd.es" rel="noopener noreferrer">www.aepd.es</a>. En Brasil es la Autoridade Nacional de Proteção de Dados (ANPD), <a href="https://www.gov.br/anpd" rel="noopener noreferrer">www.gov.br/anpd</a>. También puedes dirigirte a la autoridad del lugar donde resides.</p>
 
 <h2 id="changes">13. Cambios en esta política</h2>

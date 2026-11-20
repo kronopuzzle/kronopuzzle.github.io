@@ -30,20 +30,20 @@ layout: null
 </header>
 <main class="wrap">
 <h1>Privacy policy</h1>
-<p class="meta">Last updated: <time datetime="2026-11-16">16 November 2026</time>. Describes release v0, the current version: no account and no catalog.</p>
-<p>This policy covers every release of Krono Puzzle. Sections that apply only to a later release are marked; they describe what that release will do and do not apply to the current version.</p>
+<p class="meta">Last updated: <time datetime="2026-11-20">20 November 2026</time>. Describes release v2 (app version 2.0.0): optional account, catalog, rankings, and cover photos.</p>
 
 <h2 id="who-we-are">1. Who we are</h2>
 <p>Krono Puzzle is an independent app for timing jigsaw puzzle solves. The controller of the personal data described here is the individual developer of the app, who acts as a natural person and not through a company: Guilherme Henrique Fernandes Virtuoso. For any privacy question or request, write to the support contact: <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>.</p>
 
 <h2 id="short-version">2. The short version</h2>
-<p>Without an account, your puzzles and solves never leave your iPhone. The current version sends nothing over the network: no account, no server, no analytics.</p>
+<p>Without an account, your puzzles and solves stay on your iPhone. The catalog sends the requests described in section 4. An optional account syncs your data and, when public rankings are on, shows your display name, country, and best times in the Global and Country rankings; with public rankings off, your best times still appear in the Friends ranking for your friends. No ads, no tracking, no analytics.</p>
 
 <h2 id="on-your-device">3. Data on your device</h2>
-<p>Your puzzles, solves, pauses, settings, and box photos are stored only on your iPhone and in its iOS backup. Box photos never leave your iPhone, in any release.</p>
+<p>Your puzzles, solves, pauses, settings, and box photos are stored on your iPhone and in its iOS backup. Your box photos stay on your iPhone: they are never uploaded or synced. The only image the app can send is a cover photo (section 4).</p>
 <ul>
   <li><strong>Export:</strong> in Settings, Your data, you can export all your data as JSON (box photos are not included) or your solves as CSV. The file is built on your iPhone and leaves it only through the share sheet, to the destination you pick; the temporary file is removed after sharing.</li>
-  <li><strong>Delete all my data:</strong> in Settings, Your data, removes your puzzles, solves, pauses, photos, and settings (except the app language) from your iPhone.</li>
+  <li><strong>Delete all my data:</strong> in Settings, Your data, removes your puzzles, solves, pauses, photos, and settings (except the app language) from your iPhone. When you are signed in, it offers two choices: "Delete from this iPhone only", which does not delete your account or your data on our servers, and "Delete everything, including the cloud", which also deletes your account (section 6).</li>
+  <li><strong>Share images:</strong> when you share a result, the app builds the image on your iPhone. It leaves your iPhone only through the share sheet, to the destination you pick; the app does not store it and we never receive it.</li>
   <li><strong>Diagnostics:</strong> if you chose to share crash and usage data with Apple in iOS, Apple may share crash reports with us through App Store Connect under Apple's policy. The app itself sends nothing and links nothing to you.</li>
 </ul>
 <h3 id="championships">Championships</h3>
@@ -51,66 +51,69 @@ layout: null
 <p>In a championship, the championship name, its rules, the names the participants type, their times, and the pieces left travel over the local network, encrypted, only to the other phones in the same championship room while it is open. They never go to the internet or to us. Each phone that took part or moderated keeps its championship history until it is deleted from the history or by Delete all my data. Championships use the iOS Local Network permission; you can turn it off at any time in iOS Settings, Krono Puzzle, Local Network.</p>
 
 <h2 id="catalog">4. Catalog features</h2>
-<p class="release">Applies from version 1, with the catalog. Not in the current version.</p>
-<p>The catalog helps you find a puzzle by its barcode or by searching. When you scan a barcode or search, the app sends the barcode or the search text to our catalog service to answer the request; it is not logged. Every catalog request also carries the app version and the language, and the service derives from it a keyed hash of your network address (never the address itself). The request also carries an anonymous installation id: a random number created by the app, not linked to you, used only to apply rate limits. When you leave "Send to the catalog" on, the app sends the puzzle's code, title, brand, and piece count, which stay in the catalog as facts about the puzzle. No images are ever uploaded.</p>
+<p>The catalog helps you find a puzzle by its barcode or by searching. When you scan a barcode or search, the app sends the barcode or the search text to our catalog service to answer the request; it is not logged. Every catalog request also carries the app version and the language, and the service derives from it a keyed hash of your network address (never the address itself). The request also carries an anonymous installation id: a random number created by the app, not linked to you, used only to apply rate limits. When you leave "Send to the catalog" on, the app sends the puzzle's code, title, brand, and piece count, which stay in the catalog as facts about the puzzle. The only image the app can send is a cover photo, and only when you tap "Add a cover photo" on a puzzle you are sending to the catalog. Your box photos and every other photo stay on your iPhone.</p>
+<p><strong>Cover photos.</strong> You choose a cover photo from your camera or photo library and crop it in the app. Before sending, the app re-encodes it as a JPEG of at most 1600 pixels on a side and removes the location and camera data; our service then removes every remaining metadata segment, including any color profile, before storing it. The photo is stored in our catalog service, on Cloudflare R2, with the catalog submission that brought it. It is not linked to an account, a name, or an email address.</p>
 <ul>
   <li>The hashed network address is kept for the rate-limit window plus 48 hours, then deleted.</li>
   <li>Rate-limit counters are kept for the current window plus 48 hours, then deleted.</li>
   <li>The installation id stored with a submission is kept until 90 days after the submission is decided, then replaced by an anonymous value.</li>
+  <li>The anonymous installation id of an installation that the moderator blocked for abuse is kept for as long as the block stays, and at most 12 months after the block unless the block is renewed; it is not linked to your name or account.</li>
+  <li>A cover photo stays pending, seen only by the moderator, until the moderator decides on the submission. It is deleted if the moderator does not accept it or rejects the submission. If no decision is made, it is deleted about 180 days after it was sent.</li>
+  <li>If the moderator accepts it, the photo becomes the public picture of that puzzle in the catalog, shown to every user of the app, and stays like any other catalog picture. The picture carries no identifier and does not name you.</li>
+  <li>Cover photos are not tied to your account. Delete account does not delete a photo you already sent, and Delete all my data removes only the copy still waiting on your iPhone and resets the installation id; it does not recall a photo already sent.</li>
   <li>Delete all my data also deletes the installation id and your queue of submissions, so the next catalog request uses a new, unrelated id.</li>
 </ul>
 
 <h2 id="accounts">5. Accounts</h2>
-<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
-<p>An account is optional. You sign in with Apple or with Google. We receive the provider's identifier for you and your name if you choose to share it. We do not ask for your email address. Your profile has a display name and a country. The switch "Show my times in public rankings" is on by default: other users then see your display name, country, and best times in the rankings. You can object or opt out at any time by turning it off; turning it off removes your times from the public rankings at once; friends still see them. Friends you add by invite code see your display name, country, and times whatever this setting is. Times are self-reported. Other users can report a time with a reason and an optional note; reports are seen only by the moderator.</p>
+<p>An account is optional. You sign in with Apple or with Google. We receive the provider's identifier for you and your name if you choose to share it; the name is used only to suggest your display name and is kept only until you finish your profile. We do not ask for your email address. Your profile has a display name and a country. The switch "Show my times in public rankings" (Settings, Account, Profile) is on by default: other users then see your display name, country, and best times in the Global and Country rankings. You can object or opt out at any time by turning it off; turning it off removes your times from the Global and Country rankings at once; your friends still see them in the Friends ranking. Friends you add by invite code see your display name, country, and times whatever this setting is. Times are self-reported. Other users can report a time with a reason and an optional note; reports are seen only by the moderator.</p>
 <p>When you are signed in, your puzzles and solves (with their pauses), your profile, friendships, invite code, and the reports you file are stored by our sync and rankings services and kept until you delete your account, plus at most 30 days.</p>
-<p>From version 2, our sync service also derives a keyed hash of your network address (never the address itself) to limit sign-in attempts and failed authentication. It is kept for the rate-limit window plus 48 hours.</p>
+<p>Our sync service also derives a keyed hash of your network address (never the address itself) to limit sign-in attempts and failed authentication. It is kept for the rate-limit window plus 48 hours.</p>
 
 <h2 id="account-deletion">6. Account deletion</h2>
-<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
 <p>You can delete your account in the app, under Settings, Account, Delete account. No email or web form is needed.</p>
 <ul>
   <li>You are removed from the rankings and from your friends' lists at once.</li>
   <li>All data on our servers, including backups, is erased within 30 days.</li>
   <li>Your sign-in with Apple or Google is revoked.</li>
   <li>The data on your iPhone stays by default ("Keep a copy on this iPhone"); you can choose "Remove my data from this iPhone" to delete it too.</li>
+  <li>A cover photo you already sent is not tied to your account, so it is not deleted (section 4).</li>
 </ul>
-<p>Delete all my data on the iPhone does not delete your account; to delete the data on our servers, use Delete account.</p>
+<p><strong>Delete everything, including the cloud.</strong> While you are signed in, Settings, Your data, Delete all my data offers two choices. "Delete from this iPhone only" removes your data from this iPhone and signs you out of it; your account and your data on our servers stay. "Delete everything, including the cloud" asks you to sign in again, deletes your account on our servers as described above, and only once that succeeds removes your data from this iPhone too. If the deletion on our servers fails or the iPhone is offline, nothing is removed from the iPhone and you stay signed in. Other iPhones signed in to the same account keep their local copies until you delete them there.</p>
 
 <h2 id="never">7. What we never do</h2>
 <p>No ads, no tracking, no sale of data, no analytics SDKs, no import of contacts or social graph, and no location. We make no automated decisions that have legal or similarly significant effects on you. The app never asks for your email address.</p>
 
 <h2 id="providers">8. Service providers</h2>
-<p>The current version uses no service provider: the app sends no data to any server.</p>
+<p>We use these service providers:</p>
 <ul>
-  <li>From version 1, our backend is hosted by Cloudflare.</li>
-  <li>From version 2, Apple and Google provide sign-in.</li>
+  <li>Cloudflare hosts our backend: the catalog, sync, and rankings services, and R2 storage for cover photos.</li>
+  <li>Apple and Google provide sign-in.</li>
 </ul>
 <p>The site is hosted on GitHub Pages. GitHub logs and stores visitors' IP addresses for security purposes under its own privacy statement; the project does not receive those logs. We use no cookies or analytics.</p>
 
 <h2 id="children">9. Children</h2>
-<p>The app is not directed at children. The current version collects no data from anyone.</p>
+<p>The app is not directed at children. It asks for no age and collects no data about children knowingly.</p>
 
 <h2 id="legal-basis">10. Legal basis</h2>
 <p>Where we process personal data, we rely on these legal bases: under the EU General Data Protection Regulation (GDPR), Article 6, and under the Brazilian General Data Protection Law (LGPD), Article 7. Data that stays only on your iPhone is not processed by us and needs no legal basis.</p>
 <ul>
-  <li><strong>Catalog lookups, app version, language, and the anonymous installation id (from version 1):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in answering the request and in applying rate limits that protect the service from abuse.</li>
-  <li><strong>Hashed network address (from version 1, also in the sync service from version 2):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in protecting the service from abuse. The address is never stored, only a keyed hash.</li>
-  <li><strong>Catalog submissions (from version 1):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in building a shared catalog of puzzle facts. The facts sent (code, title, brand, piece count) are not personal data; the installation id stored with a submission is kept for 90 days after the decision. You can turn off "Send to the catalog" at any time.</li>
+  <li><strong>Catalog lookups, app version, language, and the anonymous installation id:</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in answering the request and in applying rate limits that protect the service from abuse.</li>
+  <li><strong>Hashed network address (also in the sync service):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in protecting the service from abuse. The address is never stored, only a keyed hash.</li>
+  <li><strong>Catalog submissions:</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in building a shared catalog of puzzle facts. The facts sent (code, title, brand, piece count) are not personal data; the installation id stored with a submission is kept for 90 days after the decision. You can turn off "Send to the catalog" at any time.</li>
+  <li><strong>Cover photos:</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in building a shared catalog with pictures of puzzles. Sending a photo is your choice: add none and nothing is sent. You can object at any time by writing to the support contact.</li>
   <li><strong>Crash reports received through App Store Connect (only if you chose to share them with Apple):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in fixing defects.</li>
-  <li><strong>Account, profile, puzzles and solves, friendships, and invite code (from version 2):</strong> performance of a contract (GDPR Art. 6(1)(b); LGPD Art. 7, V), to provide the account you ask for.</li>
-  <li><strong>Session records (from version 2):</strong> performance of a contract (GDPR Art. 6(1)(b); LGPD Art. 7, V), to keep you signed in.</li>
-  <li><strong>Showing your display name, country, and best times in public rankings (from version 2):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in running the rankings. You have the right to object or opt out at any time with the switch "Show my times in public rankings", which is on by default; turning it off removes your times from the public rankings at once, and friends still see them.</li>
-  <li><strong>Reports about times and moderation (from version 2):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in keeping the rankings fair.</li>
-  <li><strong>Rate-limit counters and the account deletion job (from version 2):</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in protecting the service and in completing your deletion request.</li>
+  <li><strong>Account, profile, puzzles and solves, friendships, and invite code:</strong> performance of a contract (GDPR Art. 6(1)(b); LGPD Art. 7, V), to provide the account you ask for.</li>
+  <li><strong>Session records:</strong> performance of a contract (GDPR Art. 6(1)(b); LGPD Art. 7, V), to keep you signed in.</li>
+  <li><strong>Showing your display name, country, and best times in public rankings:</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in running the rankings. You have the right to object or opt out at any time with the switch "Show my times in public rankings", which is on by default; turning it off removes your times from the public rankings at once, and friends still see them.</li>
+  <li><strong>Reports about times and moderation:</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in keeping the rankings fair.</li>
+  <li><strong>Rate-limit counters and the account deletion job:</strong> our legitimate interests (GDPR Art. 6(1)(f); LGPD Art. 7, IX) in protecting the service and in completing your deletion request.</li>
 </ul>
 
 <h2 id="transfers">11. International transfers</h2>
-<p class="release">Applies from version 1, with the online service. Not in the current version.</p>
 <p>Our backend runs on Cloudflare's global network, so your data may be processed outside the European Union, the European Economic Area, and Brazil. Cloudflare's Data Processing Addendum incorporates the EU Standard Contractual Clauses for transfers from the EEA, Switzerland and the UK (GDPR Art. 46). For data from other countries, including Brazil, it commits Cloudflare to comply with the applicable data protection laws, including those of the country the data comes from.</p>
 
 <h2 id="rights">12. Your rights and requests</h2>
-<p>Under the GDPR you have the right of access, rectification, erasure, restriction, portability, and objection. Under the LGPD you have the right to confirmation that we process your data, access, correction, anonymization, blocking or deletion, portability, information about sharing, information about the possibility of refusing consent and its consequences, objection to processing, and revocation of consent where processing is based on it. In the current version all your data is on your iPhone, so you can export or delete it yourself in Settings, Your data. To exercise any right, write to <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>. We aim to answer within 30 days.</p>
+<p>Under the GDPR you have the right of access, rectification, erasure, restriction, portability, and objection. Under the LGPD you have the right to confirmation that we process your data, access, correction, anonymization, blocking or deletion, portability, information about sharing, information about the possibility of refusing consent and its consequences, objection to processing, and revocation of consent where processing is based on it. In the app you can export your data, delete all of it, or delete your account yourself (sections 3 and 6). To exercise any right, or for anything the app cannot do, write to <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>. We aim to answer within 30 days. A cover photo carries no identifier, so we usually cannot tell which photo is yours (GDPR Art. 11). If you write to the support contact and tell us which puzzle it is, we remove the photo from the catalog when we can identify it.</p>
 <p>You also have the right to complain to a data protection authority. In Spain it is the Agencia Española de Protección de Datos (AEPD), <a href="https://www.aepd.es" rel="noopener noreferrer">www.aepd.es</a>. In Brazil it is the Autoridade Nacional de Proteção de Dados (ANPD), <a href="https://www.gov.br/anpd" rel="noopener noreferrer">www.gov.br/anpd</a>. You may also contact the authority of the place where you live.</p>
 
 <h2 id="changes">13. Changes to this policy</h2>

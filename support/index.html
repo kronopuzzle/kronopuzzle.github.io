@@ -30,7 +30,7 @@ layout: null
 </header>
 <main class="wrap">
 <h1>Support</h1>
-<p class="meta">Last updated: <time datetime="2026-11-11">11 November 2026</time>. Describes release v0, the current version: no account and no catalog.</p>
+<p class="meta">Last updated: <time datetime="2026-11-20">20 November 2026</time>. Describes release v2 (app version 2.0.0): optional account, catalog, rankings, and cover photos.</p>
 <h2 id="contact">1. Contact</h2>
 <div class="card">
   <p>Write to the support contact: <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a></p>
@@ -49,30 +49,32 @@ layout: null
 <h3>How do I move to a new iPhone without an account?</h3>
 <p>Your data travels in your iPhone's backup. Back up the old iPhone to iCloud or to a computer, then restore that backup on the new iPhone.</p>
 <h3>How do I export or delete my data?</h3>
-<p>In Settings, Your data: export all your data as JSON (box photos are not included) or your solves as CSV, or use Delete all my data to remove your puzzles, solves, pauses, photos, and settings (except the app language) from this iPhone.</p>
+<p>In Settings, Your data: export all your data as JSON (box photos are not included) or your solves as CSV, or use Delete all my data to remove your puzzles, solves, pauses, photos, and settings (except the app language) from this iPhone. If you are signed in, you choose between "Delete from this iPhone only", which keeps your account and your data on our servers, and "Delete everything, including the cloud", which also deletes your account (see section 3).</p>
+<h3>Do shared result images leave my iPhone?</h3>
+<p>Only through the share sheet, to the destination you choose. The app builds the image on your iPhone, does not store it, and we never receive it.</p>
 <h3>The barcode is not found.</h3>
-<p class="release">Applies from version 1, with the catalog. Not in the current version.</p>
 <p>Enter the puzzle manually and leave "Send to the catalog" on, so the barcode is added to the catalog.</p>
 <h3>Do I need to sign in?</h3>
-<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
 <p>No. Signing in is optional; without an account the app works fully and your data stays on your iPhone. An account adds sync, rankings, and friends.</p>
 <h3>How do rankings and self-reported times work?</h3>
-<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
 <p>Rankings are per puzzle and per mode. Every time is reported by the person who solved the puzzle; Krono Puzzle cannot verify it.</p>
+<h3>How do I turn public rankings off?</h3>
+<p>In Settings, Account, Profile, turn off "Show my times in public rankings". Your times then leave the Global and Country rankings at once; your friends still see them in the Friends ranking.</p>
 <h3>How do I report a time?</h3>
-<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
 <p>Open the time in the rankings and choose to report it, with a reason and an optional note. Reports are seen only by the moderator.</p>
+<h3>Can I remove a cover photo I sent to the catalog?</h3>
+<p>A cover photo carries no identifier and is not tied to your account, so deleting your account or your data does not recall it. Write to the support contact and tell us which puzzle it is; we remove the photo from the catalog when we can identify it. A photo that no one reviewed is deleted about 180 days after it was sent.</p>
 <h3>A translation reads wrong.</h3>
 <p>Write to the support contact with the screen and the text. The fix ships in a normal app update.</p>
 
 <h2 id="delete-account">3. How to delete your account</h2>
-<p class="release">Applies from version 2, with accounts. Not in the current version.</p>
 <ol>
   <li>Open Krono Puzzle and go to Settings, Account.</li>
   <li>Tap Delete account.</li>
   <li>Choose whether to keep a copy of your data on this iPhone (the default) or remove it, and confirm.</li>
 </ol>
 <p>You are removed from the rankings and from your friends at once, and all data on our servers is erased within 30 days. If the app is no longer installed, write to <a class="contact" href="mailto:{{ site.support_email }}">{{ site.support_email }}</a> for help.</p>
+<p>To delete your data on this iPhone and in the cloud in one step, open Settings, Your data, tap Delete all my data, and choose "Delete everything, including the cloud". You sign in again, your account is deleted on our servers, and only then is your data removed from this iPhone. If the deletion fails or you are offline, nothing is removed from the iPhone. Other iPhones signed in to the account keep their local copies until you delete them there. Delete account does not recall a cover photo you already sent (see the privacy policy, section 4).</p>
 
 <h2 id="acknowledgements">4. Acknowledgements</h2>
 <p>Krono Puzzle uses the Archivo fonts, distributed under the SIL Open Font License, Version 1.1.</p>
