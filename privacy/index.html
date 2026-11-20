@@ -57,8 +57,8 @@ layout: null
   <li>The hashed network address is kept for the rate-limit window plus 48 hours, then deleted.</li>
   <li>Rate-limit counters are kept for the current window plus 48 hours, then deleted.</li>
   <li>The installation id stored with a submission is kept until 90 days after the submission is decided, then replaced by an anonymous value.</li>
-  <li>The anonymous installation id of an installation that the moderator blocked for abuse is kept for as long as the block stays; it is not linked to your name or account.</li>
-  <li>A cover photo stays pending, seen only by the moderator, until the moderator decides on the submission. It is deleted if the moderator does not accept it or rejects the submission.</li>
+  <li>The anonymous installation id of an installation that the moderator blocked for abuse is kept for as long as the block stays, and at most 12 months after the block unless the block is renewed; it is not linked to your name or account.</li>
+  <li>A cover photo stays pending, seen only by the moderator, until the moderator decides on the submission. It is deleted if the moderator does not accept it or rejects the submission. If no decision is made, it is deleted about 180 days after it was sent.</li>
   <li>If the moderator accepts it, the photo becomes the public picture of that puzzle in the catalog, shown to every user of the app, and stays like any other catalog picture. The picture carries no identifier and does not name you.</li>
   <li>Cover photos are not tied to your account. Delete account does not delete a photo you already sent, and Delete all my data removes only the copy still waiting on your iPhone and resets the installation id; it does not recall a photo already sent.</li>
   <li>Delete all my data also deletes the installation id and your queue of submissions, so the next catalog request uses a new, unrelated id.</li>
